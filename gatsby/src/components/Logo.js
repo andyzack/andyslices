@@ -4,36 +4,36 @@ import stripes from '../assets/images/stripes.svg';
 
 const LogoStyles = styled.div`
   /* This value controls the entire size of the logo*/
-  font-size: 6px;
-  font-size: clamp(1px, 0.65vw, 8px);
-  width: 30em;
-  height: 30em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  margin: 0;
   --borderSize: 1em;
   background: white url(${stripes});
   background-size: 150em;
   border: var(--borderSize) solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   display: flex;
+  font-size: 6px;
+  font-size: clamp(1px, 0.65vw, 8px);
+  height: 30em;
+  margin: 0;
+  width: 30em;
   .inner {
-    margin: var(--borderSize);
-    flex: 1;
+    align-content: center;
     background: white;
     display: grid;
+    flex: 1;
     grid-template-rows: 20% 1fr 1fr;
-    align-content: center;
+    margin: var(--borderSize);
   }
   .est {
-    font-size: 1.5em;
     align-self: center;
+    font-size: 1.5em;
   }
   h1 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
     align-items: center;
+    display: grid;
     margin: 0;
-    grid-row: 2 / span 2;
     grid-gap: 2em;
+    grid-row: 2 / span 2;
+    grid-template-rows: 8fr 2fr;
     transform: translateY(-0.7em);
   }
 
@@ -42,25 +42,27 @@ const LogoStyles = styled.div`
     letter-spacing: 0.2em;
     transform: translateY(-0.15em);
   }
+
   .slicks {
-    transform: scale(1.4);
     display: block;
-    text-shadow: 0.18em 0.18em 0 rgba(0, 0, 0, 0.05);
     perspective: 100px;
+    text-shadow: 0.18em 0.18em 0 rgba(0, 0, 0, 0.05);
+    transform: scale(1.4);
   }
+
   .letter {
-    font-size: 5em;
-    color: var(--red);
     --scale: 1;
     --rotate: -10deg;
     --translateX: 0;
     --translateY: 0;
     --rotateX: 0deg;
+    color: var(--red);
+    display: inline-block;
+    font-size: 5em;
+    line-height: 1;
     transform: scale(var(--scale)) rotate(var(--rotate))
       translateX(var(--translateX)) translateY(var(--translateY))
       rotateX(var(--rotateX));
-    display: inline-block;
-    line-height: 1;
     transition: transform 0.3s;
     &.S {
       --translateX: -0.05;

@@ -9,20 +9,20 @@ const NavStyles = styled.nav`
     transform: translateY(-25%);
   }
   ul {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr 1fr;
-    grid-gap: 2rem;
-    text-align: center;
-    list-style: none;
     align-items: center;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr auto 1fr 1fr;
+    list-style: none;
+    margin: 0;
     margin-top: -6rem;
+    padding: 0;
+    text-align: center;
   }
   li {
     --rotate: -2deg;
-    transform: rotate(var(--rotate));
     order: 1;
+    transform: rotate(var(--rotate));
     &:nth-child(1) {
       --rotate: 1deg;
     }

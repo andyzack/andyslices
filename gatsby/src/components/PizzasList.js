@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 const PizzaGridStyles = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 4rem;
   grid-auto-rows: auto auto 500px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 `;
 
 const PizzaStyles = styled.div`
@@ -16,9 +16,9 @@ const PizzaStyles = styled.div`
   @supports not (grid-template-rows: subgrid) {
     --rows: auto auto 1fr;
   }
+  grid-gap: 1rem;
   grid-template-rows: var(--rows, subgrid);
   grid-row: span 3;
-  grid-gap: 1rem;
   h2,
   p {
     margin: 0;

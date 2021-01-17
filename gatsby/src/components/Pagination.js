@@ -3,27 +3,27 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PaginationStyles = styled.div`
-  display: flex;
-  align-items: center;
   align-content: center;
-  justify-items: center;
+  align-items: center;
   border: 1px solid var(--grey);
-  margin: 2rem 0;
   border-radius: 5px;
+  display: flex;
+  justify-items: center;
+  margin: 2rem 0;
   text-align: center;
   width: 100%;
   & > * {
+    border-right: 1px solid var(--grey);
     flex: 1;
     padding: 1rem;
-    border-right: 1px solid var(--grey);
     text-decoration: none;
     &[aria-current],
     .current {
       color: var(--red);
     }
     &[disabled] {
-      pointer-events: none;
       color: var(--grey);
+      pointer-events: none;
     }
   }
 `;

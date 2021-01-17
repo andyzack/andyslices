@@ -11,18 +11,17 @@ const BeerGridStyles = styled.div`
 
 const SingleBeerStyled = styled.div`
   border: 1px solid var(--grey);
+  display: grid;
   padding: 2rem;
   text-align: center;
-  display: grid;
   img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    display: block;
     display: grid;
     align-items: center;
-    justify-content: center;
     font-size: 10px;
+    justify-content: center;
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
   }
 `;
 
